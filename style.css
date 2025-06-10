@@ -7,6 +7,14 @@ Version: 1.0.0
 */
 /* Import parent theme styles */
 @import url("../twentyseventeen/style.css");
+@media screen and (min-width: 48em) {
+  .site-header .menu-scroll-down {
+    display: none !important;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+  }
+}
 /* Typography */
 .site-description {
   font-size: 1.5rem;
@@ -20,6 +28,22 @@ Version: 1.0.0
 
 #main .page {
   margin-top: 3em;
+}
+
+.site-content {
+  padding-top: 0 !important;
+}
+
+.media-text-mt {
+  margin-top: 1em !important;
+}
+
+.media-text-mb {
+  margin-bottom: 1em !important;
+}
+
+#ignatius-press-online a:hover {
+  color: #fff;
 }
 
 /* Scroll Down Button Styles - Debug version */
@@ -36,7 +60,7 @@ Version: 1.0.0
 
 .scroll-down-button {
   position: fixed !important;
-  bottom: 40px !important;
+  bottom: 70px !important;
   left: 50% !important;
   transform: translateX(-50%) translateY(100px) !important;
   padding: 20px 30px !important;
@@ -107,6 +131,12 @@ Version: 1.0.0
   opacity: 0 !important;
   pointer-events: none !important;
   transform: translateX(-50%) translateY(100px) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-down-button {
+    bottom: 50% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@ Version: 1.0.0
 /* Import parent theme styles */
 @import url("../twentyseventeen/style.css");
 
+@import "supports/nav";
 @import "supports/typography";
 @import "supports/page";
 @import "supports/scrolly";
