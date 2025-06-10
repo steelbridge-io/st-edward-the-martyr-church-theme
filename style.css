@@ -13,25 +13,37 @@ Version: 1.0.0
 }
 
 /* Page */
+#content {
+  position: relative;
+  z-index: 100;
+}
+
 #main .page {
   margin-top: 3em;
 }
 
 /* Scroll Down Button Styles - Debug version */
+.scroll-arrow .lni {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.contact-form {
+  background-color: #eee;
+  padding: 2em;
+}
+
 .scroll-down-button {
   position: fixed !important;
   bottom: 40px !important;
   left: 50% !important;
   transform: translateX(-50%) translateY(100px) !important;
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 2px solid #222 !important;
-  border-radius: 50px !important;
   padding: 20px 30px !important;
   cursor: pointer !important;
-  z-index: 99999 !important;
+  z-index: 20 !important;
   opacity: 0 !important;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
   min-width: 120px !important;
   text-align: center !important;
   display: block !important;
@@ -43,15 +55,13 @@ Version: 1.0.0
 }
 
 .scroll-down-button:hover {
-  background: rgb(255, 255, 255) !important;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
   transform: translateX(-50%) translateY(-8px) !important;
 }
 
 .scroll-down-button .scroll-text {
   font-size: 13px !important;
   font-weight: 700 !important;
-  color: #222 !important;
+  color: #fff !important;
   margin-bottom: 10px !important;
   text-align: center !important;
   letter-spacing: 1px !important;
@@ -72,7 +82,6 @@ Version: 1.0.0
   display: block !important;
   width: 24px !important;
   height: 2px !important;
-  background: #222 !important;
   margin: 1px 0 !important;
   border-radius: 2px !important;
   transition: all 0.3s ease !important;

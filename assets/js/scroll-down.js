@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function($) {
     console.log('Scroll down script loaded');
 
@@ -5,9 +6,7 @@ jQuery(document).ready(function($) {
     var scrollButtonHTML = `
         <div id="scroll-down-btn" class="scroll-down-button">
             <div class="scroll-arrow">
-                <span></span>
-                <span></span>
-                <span></span>
+                <i class="lni lni-arrow-downward"></i>
             </div>
             <div class="scroll-text">Scroll Down</div>
         </div>
@@ -23,7 +22,7 @@ jQuery(document).ready(function($) {
         console.log('Button should now be visible');
     }, 2000);
 
-    // Smooth scroll to main content when button is clicked
+    // Simple smooth scroll when button is clicked
     $(document).on('click', '#scroll-down-btn', function(e) {
         e.preventDefault();
         console.log('Scroll button clicked');
@@ -35,9 +34,13 @@ jQuery(document).ready(function($) {
 
         if (target.length) {
             console.log('Scrolling to target');
-            $('html, body').animate({
-                scrollTop: target.offset().top - 50
-            }, 1000);
+
+            // Native smooth scroll - works great in all modern browsers including Chrome
+            target[0].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
         } else {
             console.log('No scroll target found');
         }

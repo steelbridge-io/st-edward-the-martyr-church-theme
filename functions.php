@@ -14,12 +14,14 @@ function twentyseventeen_child_enqueue_styles() {
     );
 
     // Enqueue child theme style
-    wp_enqueue_style(
-        'twentyseventeen-child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array('twentyseventeen-parent-style'),
-        wp_get_theme()->get('Version')
-    );
+    wp_enqueue_style('twentyseventeen-child-style',
+     get_stylesheet_directory_uri() . '/style.css',
+     array('twentyseventeen-parent-style'),
+     wp_get_theme()->get('Version'));
+    wp_enqueue_style('lineicons',
+     'https://pro-cdn.lineicons.com/5.0/regular/lineicons.css',
+     array('twentyseventeen-parent-style'),
+     wp_get_theme()->get('Version'));
 }
 add_action('wp_enqueue_scripts', 'twentyseventeen_child_enqueue_styles');
 

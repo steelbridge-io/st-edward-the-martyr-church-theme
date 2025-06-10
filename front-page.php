@@ -15,14 +15,12 @@
 get_header(); ?>
 
     <!-- Scroll Down Button -->
-    <div id="scroll-down-btn" class="scroll-down-button">
+    <!--<div id="scroll-down-btn" class="scroll-down-button">
         <div class="scroll-arrow">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class="lni lni-arrow-downward"></i>
         </div>
         <div class="scroll-text">Scroll Down</div>
-    </div>
+    </div> -->
 
 
 <div id="primary" class="content-area">
