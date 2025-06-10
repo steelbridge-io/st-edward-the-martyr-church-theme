@@ -1,0 +1,83 @@
+
+/* Scroll Down Button Styles - Debug version */
+.scroll-down-button {
+  position: fixed !important;
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(100px) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid #222 !important;
+  border-radius: 50px !important;
+  padding: 20px 30px !important;
+  cursor: pointer !important;
+  z-index: 99999 !important;
+  opacity: 0 !important;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  min-width: 120px !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.scroll-down-button.visible {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.scroll-down-button:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+  transform: translateX(-50%) translateY(-8px) !important;
+}
+
+.scroll-down-button .scroll-text {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #222 !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif !important;
+}
+
+/* Animated Arrow */
+.scroll-arrow {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 20px !important;
+}
+
+.scroll-arrow span {
+  display: block !important;
+  width: 24px !important;
+  height: 2px !important;
+  background: #222 !important;
+  margin: 1px 0 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+.scroll-arrow span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px) !important;
+  width: 18px !important;
+}
+
+.scroll-arrow span:nth-child(2) {
+  opacity: 1 !important;
+  width: 24px !important;
+}
+
+.scroll-arrow span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px) !important;
+  width: 18px !important;
+}
+
+/* Hide button when scrolled past hero */
+.scroll-down-button.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateX(-50%) translateY(100px) !important;
+}
