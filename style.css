@@ -46,6 +46,19 @@ Version: 1.0.0
   color: #fff;
 }
 
+/* Colors */
+p a {
+  color: #ff6900;
+}
+
+.upload-form-bible-study #gform_browse_button_1_4 {
+  background-color: #ff6900;
+}
+
+.gform-theme--framework .gfield:where(.gfield--type-fileupload, .gfield--input-type-fileupload) .gform_drop_area::before {
+  color: #ff6900 !important;
+}
+
 /* Scroll Down Button Styles - Debug version */
 .scroll-arrow .lni {
   font-size: 3rem;
